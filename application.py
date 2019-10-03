@@ -23,6 +23,8 @@ APPLICATION_NAME = "Catagory Series Application"
 # Connect to Database and create database session
 engine = create_engine('sqlite:///catagories.db',
                        connect_args={'check_same_thread': False})
+#engine = create_engine('postgresql://catalog:1234@localhost/catalog')
+
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
